@@ -3012,6 +3012,7 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
 @media (prefers-reduced-motion: reduce) {
   .btn {
     transition: none;
@@ -3117,6 +3118,18 @@ textarea.form-control-lg {
   color: #fff;
   background-color: #198754;
   border-color: #198754;
+}
+
+.livro{
+  background-color: #0ee706; !important;
+}
+
+.inCart{
+  background-color: red; !important;
+}
+
+#closeCart{
+  background-color: #0ee706;
 }
 
 .btn-info {
