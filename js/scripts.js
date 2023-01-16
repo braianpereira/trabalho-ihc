@@ -42,9 +42,8 @@ $(".livro").click(function(){
 	let book_index = $(this).attr("book-index")
 
 	if(element.hasClass('inCart')) {
-		element.html("Adicionar ao carrinho")
+		element.html( "Adicionar ao carrinho")
 		cart.splice(cart.findIndex(v => v.name === books[book_index].name), 1)
-
 		alertify.warning("Produto removido")
 
 	} else {
