@@ -42,20 +42,24 @@ $(".livro").click(function(){
 	let book_index = $(this).attr("book-index")
 
 	if(element.hasClass('inCart')) {
-		element.html( "Adicionar ao carrinho")
+		element.find('.btn-book__text').html( "Adicionar ao carrinho")
 		cart.splice(cart.findIndex(v => v.name === books[book_index].name), 1)
-		alertify.warning("Produto removido")
+		alertify.error("Produto removido")
 
 	} else {
-		element.html( "Remover do carrinho")
+		element.find('.btn-book__text').html( "Remover do carrinho")
 		cart.push(books[book_index])
 		alertify.success("Produto adicionado")
 	}
 
 	element.toggleClass('inCart')
 
+	element.toggleClass('btn-success btn-danger')
+	element.find('.bi').toggleClass('bi-bag-plus bi-bag-x')
+
 	updateCart()
 
+	element.blur()
 })
 
 function updateCart(){
